@@ -1,0 +1,49 @@
+
+
+
+@mixin buttonStyle {
+  color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px 0 5px 0;
+    box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+    background-color: #1fdb84;
+    border: none;
+    &:hover {
+      transition-duration: 400ms;
+      color: #031d5b;
+    }
+}
+@mixin buttonStyle_2 {
+  color: white;
+    display: flex;
+    justify-content: center;
+    border-radius: 10px 0 10px 0;
+    box-shadow: 0 8px 34px 0 rgba(31, 219, 132, 0.6);
+    background-color: #1fdb84;
+    border: none;
+    &:hover {
+      transition-duration: 400ms;
+      color: #031d5b;
+    }
+}
+
+@mixin linkStyle {
+  &:hover {
+    text-decoration: none;
+    color: white;
+    border-bottom: 3px solid red;
+  }
+}
+@mixin linkStyle_2 {
+  &:hover {
+    text-decoration: none;
+    color: #5b6c94;
+  }
+}
+
+@mixin benefitsLine {
+  width: 60px;
+  height: 4px;
+  background-color: #1fdb84;
+}

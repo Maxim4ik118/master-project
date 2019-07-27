@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="http://localhost:35729/livereload.js"></script>
+  <title key='title'></title>
+</head>
+<style>
+  .main_wrapper {
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center;
+    justify-items: center;
+    }
+  .main_wrapper__red {
+    width: 200px; 
+    height: 200px; 
+    border: 2px solid black; 
+    display: flex;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+  .main_wrapper__yellow {
+    width: 200px; 
+    height: 200px; 
+    border: 2px solid black; 
+    display: flex;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+  .main_wrapper__green {
+    width: 200px; 
+    height: 200px; 
+    border: 2px solid black; 
+    display: flex;
+    margin: 0 auto;
+    border-radius: 50%;
+  }
+  .btn_reset {
+    width: 280px;
+    height: 40px;
+    margin: 30px auto;
+    color: white;
+    background-color: black;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+  }
+  .main_wrapper__red {
+    background-color: red;
+  }
+  .main_wrapper__yellow {
+    background-color: yellow;
+  }
+  .main_wrapper__green {
+    background-color: green;
+  }
+</style>
+<body>
+  <h1>Hello from lesson_9</h1>
+  <button onclick='hello()'>Click me</button>
+  <p id='output' class="white"></p>
+  <button onclick='toggleColor()' class='toggleButton'>Click me</button>
+  <button onclick="moveBtn()" id="moveButton" style="left: 0">Cliclk me_2</button>
+
+
+
+
+  <div class="main_wrapper">
+    <button class="main_wrapper__red" onclick="clickRed()"></button>
+    <button class="main_wrapper__yellow" onclick="clickYellow()"></button>
+    <button class="main_wrapper__green" onclick='clickGreen()'></button>
+    <button class="btn_reset" onclick='resetButton()' >Click me to reset the Trafficlight</button>
+  </div> 
+  <script>
+   
+   function resetButton () {
+      const resetRed = document.querySelector('.main_wrapper__red');
+      const resetYellow = document.querySelector('.main_wrapper__yellow');
+      const resetGreen = document.querySelector('.main_wrapper__green');
+      resetRed.style.backgroundColor = 'red';
+      resetYellow.style.backgroundColor = 'yellow';
+      resetGreen.style.backgroundColor = 'green';
+   }
+
+    function clickRed () {
+      const Red = document.querySelector('.main_wrapper__red');
+      const secondRed = document.querySelector('.main_wrapper__yellow');
+      const thirdRed = document.querySelector('.main_wrapper__green');
+      Red.style.backgroundColor = 'red';
+      secondRed.style.backgroundColor = 'red';
+      thirdRed.style.backgroundColor = 'red';
+
+    }
+    function clickYellow () {
+      const Yellow = document.querySelector('.main_wrapper__red');
+      const secondYellow = document.querySelector('.main_wrapper__yellow');
+      const thirdYellow = document.querySelector('.main_wrapper__green');
+      Yellow.style.backgroundColor = 'Yellow';
+      secondYellow.style.backgroundColor = 'Yellow';
+      thirdYellow.style.backgroundColor = 'Yellow';
+    }
+    function clickGreen () {
+      const Green = document.querySelector('.main_wrapper__red');
+      const secondGreen = document.querySelector('.main_wrapper__yellow');
+      const thirdGreen = document.querySelector('.main_wrapper__green');
+      Green.style.backgroundColor = 'Green';
+      secondGreen.style.backgroundColor = 'Green';
+      thirdGreen.style.backgroundColor = 'Green';
+    }
+
+    function hello () {
+      const name = prompt('Enter name');
+      const element = document.querySelector('#output');
+      console.log(typeof element);
+      console.dir(element);
+      element.textContent = 'Hello, ' + name;
+      element.style.fontSize = '50px';
+    }
+
+    function toggleColor () {
+      const button = document.querySelector('.toggleButton');
+
+      if ( button.style.backgroundColor === 'red' ) {
+        button.style.backgroundColor = 'transparent';
+        button.textContent = 'Off';
+        button.style.width = '100px';
+      } else {
+        button.style.backgroundColor = 'red';
+        button.textContent = 'On';
+        button.style.width = '120px';
+      }
+    }
+
+    function moveBtn () {
+      const mvBtn = document.querySelector('#moveButton');
+      const coords = parseInt(mvBtn.style.left);
+      mvBtn.style.transition = 'all 400ms';
+      mvBtn.style.position = 'relative';
+      mvBtn.style.left =  '50px';
+      mvBtn.style.left = coords + 50 + 'px';
+
+  
+    }
+
+  </script>
+</body>
+
+</html>

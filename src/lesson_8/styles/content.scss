@@ -1,0 +1,10 @@
+.content {
+    &__item {
+        background-color: red;
+        height: 200px;
+        &:nth-child(odd) {
+            background-color: aqua;
+        }
+        border: 1px solid green;
+    }
+}
