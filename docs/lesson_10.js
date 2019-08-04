@@ -171,6 +171,48 @@ function findMax(array) {
 console.log(find([4, 6]), 23);
 console.log(find([4, 6]), 4);
 console.log(find([4, 6]), 6);
+var salaries = [{
+  name: 'John',
+  salary: 2200
+}, {
+  name: 'Mike',
+  salary: 250
+}, {
+  name: 'Alex',
+  salary: 2560
+}, {
+  name: 'James',
+  salary: 1200
+}];
+
+function findLargestSalary(arr) {
+  // Your code here
+  var max = salaries[0].salary;
+
+  for (var _i4 = 0; _i4 < salaries.length; _i4++) {
+    if (max < salaries[_i4].salary) {
+      max = salaries[_i4].salary;
+    }
+  }
+
+  console.log(max);
+  return max;
+}
+
+function calcTotalSalaries(arr) {
+  // // Your code here
+  var result = 0;
+
+  for (var _i5 = 0; _i5 < salaries.length; _i5++) {
+    result = result + salaries[_i5].salary;
+  }
+
+  console.log(result);
+  return result;
+}
+
+findLargestSalary(salaries);
+calcTotalSalaries(salaries);
 
 /***/ }),
 
