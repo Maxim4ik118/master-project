@@ -1,8 +1,11 @@
 import './lesson_12.scss';
-import { TrafficLighter } from './scripts/treafficLighter';
+import { LighterController } from './scripts/lighterController';
+import { Light } from './scripts/light';
 
-const test = [];
-const lighter = new TrafficLighter(document.querySelector('.container'));
-const lighter2 = new TrafficLighter(document.querySelector('.container'));
-console.log(lighter);
-window.lighter = lighter;
+
+const control = new LighterController( document.querySelector('body'));
+const someLight = new Light( document.querySelector('body'));
+const someLight2 = new Light( document.querySelector('body'), 'lime');
+const someLight3 = new Light( document.querySelector('body'), 'turquoise');
+const someLight4 = new Light( document.querySelector('body'), 'purple');
+
