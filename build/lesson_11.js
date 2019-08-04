@@ -97,20 +97,20 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _lesson_11_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./lesson_11.scss */ "./src/lesson_11/lesson_11.scss");
 /* harmony import */ var _lesson_11_scss__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_lesson_11_scss__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _scripts_button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scripts/button */ "./src/lesson_11/scripts/button.js");
-/* harmony import */ var _scripts_trafficLight__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./scripts/trafficLight */ "./src/lesson_11/scripts/trafficLight.js");
-/* harmony import */ var _scripts_trafficLight__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_scripts_trafficLight__WEBPACK_IMPORTED_MODULE_2__);
+!(function webpackMissingModule() { var e = new Error("Cannot find module './scripts/button'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module './scripts/TrafficLighter'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+!(function webpackMissingModule() { var e = new Error("Cannot find module './scripts/paragraph'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 
 
 
-var test = [];
+
 
 function showModal() {
-  var str = prompt('Enter text');
-  test.push(str);
+  var input = prompt('Enter any text!');
+  new !(function webpackMissingModule() { var e = new Error("Cannot find module './scripts/paragraph'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())(input);
 }
 
-var btn1 = new _scripts_button__WEBPACK_IMPORTED_MODULE_1__["Button"]('Hello ', showModal);
+var btn1 = new !(function webpackMissingModule() { var e = new Error("Cannot find module './scripts/button'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())('Hello ', showModal);
 
 /***/ }),
 
@@ -122,41 +122,6 @@ var btn1 = new _scripts_button__WEBPACK_IMPORTED_MODULE_1__["Button"]('Hello ', 
 /***/ (function(module, exports, __webpack_require__) {
 
 // extracted by mini-css-extract-plugin
-
-/***/ }),
-
-/***/ "./src/lesson_11/scripts/button.js":
-/*!*****************************************!*\
-  !*** ./src/lesson_11/scripts/button.js ***!
-  \*****************************************/
-/*! exports provided: Button */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Button", function() { return Button; });
-function Button(text, clickHandler) {
-  this.target = document.querySelector('body');
-  this.btn = document.createElement('button'); // создание елемента дом дерева
-
-  this.btn.classList.add('btn');
-  this.btn.textContent = text;
-  this.btn.onclick = clickHandler;
-  this.target.appendChild(this.btn); // вставка елемента
-}
-
-
-
-/***/ }),
-
-/***/ "./src/lesson_11/scripts/trafficLight.js":
-/*!***********************************************!*\
-  !*** ./src/lesson_11/scripts/trafficLight.js ***!
-  \***********************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: C:\\homeworks-master\\src\\lesson_11\\scripts\\trafficLight.js: Unexpected token (17:1)\n\n\u001b[0m \u001b[90m 15 | \u001b[39m    }\u001b[0m\n\u001b[0m \u001b[90m 16 | \u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 17 | \u001b[39m}\u001b[0m\n\u001b[0m \u001b[90m    | \u001b[39m \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n    at Object.raise (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:3851:17)\n    at Object.unexpected (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:5167:16)\n    at Object.parseExprAtom (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:6328:20)\n    at Object.parseExprAtom (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:3570:20)\n    at Object.parseExprSubscripts (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:5914:23)\n    at Object.parseMaybeUnary (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:5894:21)\n    at Object.parseExprOps (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:5781:23)\n    at Object.parseMaybeConditional (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:5754:23)\n    at Object.parseMaybeAssign (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:5701:21)\n    at Object.parseExpression (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:5649:23)\n    at Object.parseStatementContent (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:7420:23)\n    at Object.parseStatement (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:7291:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:7868:25)\n    at Object.parseBlockBody (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:7855:10)\n    at Object.parseBlock (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:7839:10)\n    at Object.parseFunctionBody (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:6909:24)\n    at Object.parseFunctionBodyAndFinish (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:6879:10)\n    at withTopicForbiddingContext (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:8006:12)\n    at Object.withTopicForbiddingContext (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:7185:14)\n    at Object.parseFunction (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:8005:10)\n    at Object.parseFunctionStatement (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:7639:17)\n    at Object.parseStatementContent (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:7329:21)\n    at Object.parseStatement (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:7291:17)\n    at Object.parseBlockOrModuleBlockBody (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:7868:25)\n    at Object.parseBlockBody (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:7855:10)\n    at Object.parseTopLevel (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:7220:10)\n    at Object.parse (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:8863:17)\n    at parse (C:\\homeworks-master\\node_modules\\@babel\\parser\\lib\\index.js:11135:38)\n    at parser (C:\\homeworks-master\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:170:34)\n    at normalizeFile (C:\\homeworks-master\\node_modules\\@babel\\core\\lib\\transformation\\normalize-file.js:138:11)");
 
 /***/ }),
 

@@ -1,10 +1,16 @@
 import './lesson_11.scss';
 import { Button } from './scripts/button';
-import { TrafficLight } from './scripts/trafficLight';
+import { TrafficLight } from './scripts/TrafficLighter';
+import { Paragraph } from './scripts/paragraph';
 
-const test = [];
-function showModal () {
-  const str = prompt('Enter text');
-  test.push(str);
+
+function showModal() {
+  const input = prompt('Enter any text!');
+  new Paragraph(input);
 }
+
 const btn1 = new Button('Hello ', showModal);
+
+
+
+
